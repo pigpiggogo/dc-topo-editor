@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-scada-bg: #0f172a;
+  --color-scada-grid: #1e293b;
+  --color-scada-panel: #1e293b;
+  --color-scada-border: #334155;
+  --color-scada-text: #e2e8f0;
+  --color-scada-text-muted: #94a3b8;
+  --color-voltage-48: #8b5cf6;
+  --color-voltage-220: #f59e0b;
+  --color-voltage-380: #10b981;
+  --color-voltage-750: #3b82f6;
+  --color-voltage-800: #06b6d4;
+  --color-voltage-1000: #f97316;
+  --color-voltage-1500: #ef4444;
+  --color-voltage-unknown: #9ca3af;
+  --color-category-power: #dcfce7;
+  --color-category-converter: #fef9c3;
+  --color-category-distribution: #dbeafe;
+  --color-category-load: #fee2e2;
+  --color-category-auxiliary: #f3e8ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* React Flow custom styles for dark theme */
+.react-flow__node {
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease;
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 0 0 2px #3b82f6, 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #0f172a;
+  background-color: #3b82f6;
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.2);
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+  transition: stroke 0.2s ease;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke-width: 3;
+  filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.6));
+}
+
+.react-flow__controls {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.react-flow__controls button {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border: none;
+  border-bottom: 1px solid #334155;
+}
+
+.react-flow__controls button:hover {
+  background-color: #334155;
+}
+
+.react-flow__minimap {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+}
+
+.react-flow__background {
+  background-color: #0f172a;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
